@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.4] - 2024-07-21
+Fixed some bugs
+
+### Changed
+- Updated the `place_blocks.glm` example program, with new syntax.
+- Updated the resource pack such that the golem now faces direction of travel (positive X).
+
+### Fixed
+- Place no longer duplicates blocks when there's only one left.
+- Place no longer deletes fresh pickaxes if a pickaxe has been broken before.
+- Waxing a golem no longer runs the golem as well.
+
 ## [0.3.3] - 2024-06-19
 Update to 1.21
 

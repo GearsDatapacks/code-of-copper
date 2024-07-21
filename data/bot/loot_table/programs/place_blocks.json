@@ -10,7 +10,7 @@
             {
               "function": "minecraft:set_writable_book_pages",
               "pages": [
-                "# Place a block into\n# slot 0 of the Golem.\n#\n# It loves placing\n# blocks!\n\nprint(\"Insert block!\")\n\nplace(0, [1,1,0])\n\n# Now try putting\n# a pickaxe in the\n# same slot."
+                "# Place a cobblestone\n# block into the \n# Golem's inventory.\n\nplace(:cobblestone, [1,1,0])\n\n# Now put a stone\n# pickaxe in the Golem\n# and try again.\n\nplace(:stone_pickaxe, [1,1,0])"
               ],
               "mode": "replace_all"
             },

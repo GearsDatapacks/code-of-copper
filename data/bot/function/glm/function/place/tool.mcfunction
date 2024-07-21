@@ -9,7 +9,7 @@ $execute as 704a8f67-58d9-429d-8535-8eb0957136ca run loot replace entity @s weap
 scoreboard players set $damage bot.interpreter 0
 execute store result score $damage bot.interpreter run data get storage bot:private temp.place.components.minecraft:damage
 execute store result entity 704a8f67-58d9-429d-8535-8eb0957136ca HandItems[0].components.minecraft:damage int 1 run scoreboard players add $damage bot.interpreter 1
-execute as 704a8f67-58d9-429d-8535-8eb0957136ca store result score $is_broken bot.interpreter run execute if predicate bot:is_broken
+execute as 704a8f67-58d9-429d-8535-8eb0957136ca store success score $is_broken bot.interpreter run execute if predicate bot:is_broken
 
 $execute if score $is_broken bot.interpreter matches 1 run data remove entity @s Items[{Slot:$(slot)b}]
 $execute unless score $is_broken bot.interpreter matches 1 store result entity @s Items[{Slot:$(slot)b}].components.minecraft:damage int 1 run scoreboard players get $damage bot.interpreter
@@ -36,3 +36,4 @@ $execute if score $gamerule_success bot.interpreter matches 1 run setblock ~$(x)
 execute if score $tile_drops bot.interpreter matches 1 run gamerule doTileDrops true
 
 scoreboard players set $tile_drop_guard bot.interpreter 0
+data remove storage bot:private temp.place
